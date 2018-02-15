@@ -1,0 +1,236 @@
+<html>
+    <head>
+        <title>Jay Khedekar</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> 
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+<body>
+
+<!-- NAVBAR FIXED TOP-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" id="logo">JK  </a>
+            <button style="outline: none;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- BIODATA PAGE WITH SELF PICTURE -->
+
+
+    <div class="container" id="bio-container">
+        <div class="row">
+            <div class="col col-lg-4 col-md-12">
+                <img src="img/bio1.jpg" alt="Couldn't load the image." class="image-sizing">
+            </div>
+            <!-- EVERYTHING ABOUT ME TAB -->
+            <div class="col col-lg-8 col-md-12">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                    </li>
+                </ul>
+                    
+                <div class="tab-content" id="myTabContent">
+                       
+                        <!-- ABOUT ME TAB CONTENT -->
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="fade-border">
+                                <h2 class="bio-head">I am Jay Khedekar.</h2>
+                                <h4 class="bio-content">I am a self learned web developer. I made this blog so I can share my journey along with you guys. You don't necessarily need to study computer science to become a programmer. I am here to prove you that.</h4>
+                                <h4 class="bio-content">I pursuing mechanical engineering and I'am currently in my 4th semester. It all started when I made a website for my college to provide past year question papers. I've provided a link below.</h4>
+                            </div>
+                        </div>
+                        
+                        <!-- CV TAB CONTENT -->
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="fade-border">
+                                    <h2 class="bio-head">Profile:</h2>
+                                    <h4 class="bio-content">I am an energetic and enthusiastic person who enjoys a challenge and achieving personal goals. My present career aim is to work within IT because I enjoy working with computers, I enjoy the environment and I find the work interesting and satisfying. The opportunity to learn new skills and work with new technologies is particularly attractive to me.</h4>
+                                    <h4 class="bio-content">Click to get my CV.</h4>
+                                    
+                                    <!-- MODAL POP UP CODE BELOW -->
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalLong" id="showcv">
+                                        Show CV
+                                    </button>
+                                
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLongTitle">Jay's CV</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <!-- CONTENT GOES ON THIS LINE -->
+                                                    <h2 class="bio-head">Info:</h2> 
+                                                    <ul>                                   
+                                                        <li><h4 class="bio-content">Name: Jay Khedekar</h4></li>
+                                                        <li><h4 class="bio-content">Education: B.Tech Mechanical Engineering </h4></li>
+                                                        <li><h4 class="bio-content">College: Symbiosis Institute of Technology</h4></li>
+                                                    </ul>
+                                                    <hr>
+                                                    <h2 class="bio-head">Skills:</h2>
+                                                    <ul>
+                                                        <li>
+                                                            <h4 class="bio-content">Web Development:</h4>
+                                                            <ul>
+                                                                <li class="bio-content">HTML5</li>
+                                                                <li class="bio-content">CSS</li>
+                                                                <li class="bio-content">JAVASCRIPT</li>
+                                                                <li class="bio-content">Node.Js</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <h4 class="bio-content">Designing:</h4>
+                                                            <ul>
+                                                                <li class="bio-content">Adobe Photoshop</li>
+                                                                <li class="bio-content">Sketch</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <h4 class="bio-content">Content creation:</h4>
+                                                            <ul>    
+                                                                <li class="bio-content">Quora</li>
+                                                                <li class="bio-content">Instagram</li>
+                                                            </ul>    
+                                                        </li>
+                                                    </ul>
+                                                    <hr>
+                                                    <h2 class="bio-head">Work Experience:</h2>
+                                                    <ul>
+                                                        <li class="bio-content"><h4 class="bio-content">Content Writer</h4></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a href="https://drive.google.com/file/d/19X4KhIOH3DqV_F2WYQzeOyDS6QVzmTui/view" target="_blank">
+                                                        <input type="button" value="Download PDF" class="btn btn-secondary">
+                                                    </a>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                        </div>
+                        
+                        <!-- CONTACT TAB CONTENT -->
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            <div class="fade-border">
+                                <h2 class="bio-head">Info:</h2> 
+                                <ul>                                   
+                                    <li><h4 class="bio-content">Email: jaykhedekar@hotmail.com</h4></li>
+                                    <li><h4 class="bio-content">Ph.  : 88X-XXXX-X31</h4></li>
+                                    <li><h4 class="bio-content">Twitter: @jaykhedekar7</h4></li>
+                                    <li><h4 class="bio-content">instagram: @thewebdeveloper</h4></li>
+                                </ul>
+                            </div>
+                        </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <br>
+    <div class="container">
+        <hr>
+        <div class="row">
+            <div class="col col-lg-4 col-md-4 col-sm-4">
+                    <h1 class="bio-head">HTML5</h1>
+            </div>
+            <div class="col col-lg-8 col-md-8 col-sm-8" id="bar">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+                        <span class="sr-only">85% Complete</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <div class="row">
+            <div class="col col-lg-4 col-md-4 col-sm-4">
+                <h1 class="bio-head">CSS3</h1>
+             </div>
+            <div class="col col-lg-8 col-md-8 col-sm-8" id="bar">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:45%">
+                        <span class="sr-only">60% Complete</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <div class="row">
+            <div class="col col-lg-4 col-md-4 col-sm-4">
+                <h1 class="bio-head">Javascript</h1>
+            </div>
+            <div class="col col-lg-8 col-md-8 col-sm-8" id="bar">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                        <span class="sr-only">60% Complete</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <hr>
+         
+        <div class="row">
+            <div class="col col-lg-4 col-md-4 col-sm-4">
+                <h1 class="bio-head">Photoshop</h1>
+            </div>
+            <div class="col col-lg-8 col-md-8 col-sm-8" id="bar">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                        <span class="sr-only">60% Complete</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <!-- BOOTSTRAP 4.0 JAVASCRIPT CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+
+
+
+</body>
+</html>
