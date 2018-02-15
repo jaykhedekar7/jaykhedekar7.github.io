@@ -112,3 +112,14 @@ hr.style2{
 #bar{
 	padding-top: 18px;
 }
+
+.navbar-fixed-top {
+	min-height: 80px;
+	}
+	
+	@media (min-width: 768px) {
+	.navbar {
+	border-radius: 4px;
+	min-height: 100px;
+	 }
+	}
