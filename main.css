@@ -1,11 +1,12 @@
+/* JUMBROTRON/ HEADER IMAGE CSS PART IS HERE */
 .jumbotron{
-	background-image: url(https://images.unsplash.com/photo-1515600051222-a3c338ff16f6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b3534a78a11bf9479de40a43d04af774&auto=format&fit=crop&w=1050&q=80);
-	min-height: 500px;
-	background-size: cover;
-	
+	background-image: url(https://images.unsplash.com/photo-1474929743204-8f756140cb14?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6e42ae23e3bc9ad5b69d47dc26888990&auto=format&fit=crop&w=1050&q=80);
+	opacity: 0.7;
+	min-height: 600px;
+    min-width: 100%;
+	background-size: cover;	
 }
 	
-
 #jumbo-header{
 	margin-top: 15%;
 	font-weight: 400;
@@ -15,37 +16,99 @@
 	font-weight: 200;
 }
 
-.sizing{
-	height: 500px;
-	width:100%;
-	
+#title-head{
+	font-size: 4em;
+	font-weight: 700;
+	color: #000000;
+	text-align: center;
+	margin-top: 15%;
+	font-family: sans-serif;
 }
 
-.buy-info{
-	padding-top: 0px;
-	text-align: justify;
+#content-head{
+	font-size: 1.5em;
+	font-weight: 500;
+	color: #000000;
+	text-align: center;
+	font-family: sans-serif;
 }
 
-.flow{
-	border-style: solid;
-	border-width: 1px;
-	border color: grey;
+/* NAVBAR TITLE */
+#logo{
+	font-weight: 700;
 }
 
-.padd{
-	padding-bottom: 28px;
+/* SOCIAL SITES ICON AND HORIZONTAL LINE */
+#mid{
+	width: 30%;
 }
 
-hr.style2 {
-	margin-right: 69%;
+.fa-facebook, .fa-instagram, .fa-google{
+	font-size: 35px;
+	text-decoration: none;
+	color: #000000
 }
 
-.right{
-	float: right;
+.fa-facebook, .fa-instagram, .fa-google, a:hover{
+	color: #000000;
 }
 
-.logo
-{
-	width: 25px;
-	height: 25px;
+.social{
+	text-align: center;
+	padding-top: 10px;
+}
+
+hr.style1{
+	border-top: 1px solid #8c8b8b;
+}
+
+
+.col{
+	/* Over ridden bootstrap column class */
+	text-align: center;	 
+}
+
+/* BIOPAGE - ABOUTS */
+.image-sizing{
+	width: 250px;
+	height: auto;
+	border-radius: 8%;
+	opacity: 0.8;
+	margin-bottom: 5%;
+}
+
+#bio-container{
+	margin-top: 3%;
+}
+
+.bio-head{
+	text-align: left;
+	font-weight: 500;
+	padding-left: 10px;
+}
+
+.bio-content{
+	text-align: left;
+	font-weight: 300;
+	padding-left: 10px;
+}
+
+.fade-border{
+	border-left: 1px solid #eee;
+	border-bottom: 1px solid #eee; 
+}
+
+hr.style2{
+	margin-top: -1%;
+	width: 250px;
+	float: left;
+}
+
+#showcv{
+	margin-bottom: 2%;
+	margin-top: 2%;
+}
+
+#bar{
+	padding-top: 18px;
 }
