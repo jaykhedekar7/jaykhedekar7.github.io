@@ -1,9 +1,9 @@
 /* JUMBROTRON/ HEADER IMAGE CSS PART IS HERE */
 .jumbotron{
-	background: url("img/bghead.jpg")
+	background-image: url(https://images.unsplash.com/photo-1474929743204-8f756140cb14?ixlib=rb-0.3.5&s=5b4230dbee7850a51df6e79922bf56c4&auto=format&fit=crop&w=1050&q=80);
 	opacity: 0.7;
 	min-height: 600px;
-    	min-width: 100%;
+    min-width: 100%;
 	background-size: cover;	
 }
 	
@@ -16,16 +16,17 @@
 	font-weight: 200;
 }
 
-#title-head{
+.title-head{
 	font-size: 4em;
 	font-weight: 700;
 	color: #000000;
 	text-align: center;
 	margin-top: 15%;
 	font-family: sans-serif;
+	opacity: 1;
 }
 
-#content-head{
+.content-head{
 	font-size: 1.5em;
 	font-weight: 500;
 	color: #000000;
@@ -33,10 +34,55 @@
 	font-family: sans-serif;
 }
 
-/* NAVBAR TITLE */
+/* NAVBAR CSS ALL HERE */
 #logo{
 	font-weight: 700;
+	font-size: 25px;
 }
+.nav-item{
+	font-size: 15px;
+}
+
+.navbar {
+	min-height: 28px;
+	font-size: 15px;
+}
+  
+.navbar-brand {
+	padding: 0 15px;
+	height: 75px;
+	line-height: 75px;
+}
+  
+.navbar-toggle {
+	/* (80px - button height 34px) / 2 = 23px */
+	margin-top: 20px;
+	padding: 9px 10px !important;
+}
+
+@media (min-width: 768px) {
+	.navbar{
+		font-size:1.1em;
+	}
+	.navbar-nav > li > a {
+	  /* (80px - line-height of 27px) / 2 = 26.5px */
+	  padding-top: 22px;
+	  padding-bottom: 22px;
+	  line-height: 30px;
+	  font-size: 1.3em;
+	}
+}
+
+.navbar-toggler{
+	 font-size: 40px;
+}
+ 
+#logo{
+	font-weight: 700;
+	font-size: 25px;
+}
+
+
 
 /* SOCIAL SITES ICON AND HORIZONTAL LINE */
 #mid{
@@ -113,13 +159,16 @@ hr.style2{
 	padding-top: 18px;
 }
 
-.navbar-fixed-top {
-	min-height: 80px;
-	}
-	
-	@media (min-width: 768px) {
-	.navbar {
-	border-radius: 4px;
-	min-height: 100px;
-	 }
-	}
+/* INDEX PAGE CONTENT CSS */
+
+.flat-color{
+	background-color: #f7f3f3;
+	width: 100%;
+	height: 500px;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+}
+
+#first-block{
+	margin-top: -22px;
+}
