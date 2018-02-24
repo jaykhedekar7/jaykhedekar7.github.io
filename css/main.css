@@ -1,0 +1,65 @@
+/* Main colors used are
+ #e44d26 <-- Navbar
+ #f16529 <-- Footer and header */
+
+
+ /*#######################_______Navbar_______############################ */
+.bg-light{
+    background-color: #e44d26!important;
+}
+
+.navbar-dark{
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.nav-item{
+    margin-left: 10px;
+}
+
+.btn-primary{
+    background-color: #e44d26;
+    border-color: white;
+    border-width: 1.5px;
+    border-radius: 20px;
+}
+
+.btn-primary:hover{
+    background-color: white;
+    border-color: #e44d26;
+    color: #e44d26;
+}
+
+.form-control{
+    border-radius: 20px;
+}
+
+
+
+/* #########################__________Content____________############################# */
+
+.title{
+    font-family: 'Comfortaa', cursive;
+    margin-top: 15px;
+    font-size: 1.7em;
+    block-size: 0.8em;
+    text-align: center;
+}
+
+hr.style1{
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+.card-img-top{
+    height: 143px;
+    width: 100%;
+}
+
+.card{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 18rem;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
