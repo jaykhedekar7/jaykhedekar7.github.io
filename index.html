@@ -1,89 +1,112 @@
-<html>
-    <head>
-        <title>Jay Khedekar</title>
-        <link rel="stylesheet" href="bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> 
-        <link rel="stylesheet" href="css/main.css">
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Student Update</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
 <body>
 
-<!-- NAVBAR FIXED TOP-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- #########_________Navbar code___________################ -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
         <div class="container">
-            <a class="navbar-brand" href="index.html" id="logo">JK  </a>
-            <button style="outline: none;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="" height="40px" width="40px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span> </a>
+                        <a class="nav-link" href="index.html">Home
+                            <!-- <span class="sr-only">(current)</span> -->
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="info.html">Contact</a>
                     </li>
                 </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search notes" aria-label="Search">
+                    <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+                </form>
             </div>
         </div>
     </nav>
 
 
-<!-- HEADER IMAGE PART -->
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container"> 
-            <div class="jumbotron-content">
-                <h1 class="title-head">The Web Developer</h1>
-                <h2 class="content-head">Jay Khedekar</h2>
-                <hr id="mid" class="style1">
-                <div class="container" id="mid">
-                    <div class="row">
-                        <div class="col col-lg-4 col-md-4 col-sm-12">    
-                            <a href="https://www.instagram.com/thewebdeveloper/" target="_blank"><i class="fa fa-facebook" ></i></a>
-                        </div>
-                        <div class="col col-lg-4 col-md-4 col-sm-12">    
-                            <a href="https://www.instagram.com/thewebdeveloper/" target="_blank"><i class="fa fa-instagram"></i></a>
-                        </div>
-                        <div class="col col-lg-4 col-md-4 col-sm-12">
-                            <a href="https://mail.google.com/" target="_blank"><i class="fa fa-google" ></i></a>
-                        </div>
+    <!-- #############____________Colleges grid_____________############### -->
+    <div class="container">
+        <h2 class="title">Colleges</h2>
+        <hr class="style1">
+        <div class="row">
+            <div class="col col-lg-4 col-md-6 col-sm-12">
+                <div class="card">
+                    <img class="card-img-top" src="http://www.horizonclasses.com/wp-content/uploads/2017/04/SIT-horizonagra-com.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Symbiosis Institute of Technology</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Show notes</a>
                     </div>
                 </div>
-            </div> 
-        </div>          
-    </div>
 
-<!-- CONTENT 1 OF INDEX PAGE -->
-    <div class="flat-color" id="first-block">
-        <div class="container">
+            </div>
+            <div class="col col-lg-4 col-md-6 col-sm-12">
+                <div class="card">
+                    <img class="card-img-top" src="http://singheducation.co.in/images/CollegeImages/073967n1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Sinhagad Institute of Technology</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Show notes</a>
+                    </div>
+                </div>
 
+            </div>
+            <div class="col col-lg-4 col-md-6 col-sm-12">
+                <div class="card">
+                    <img class="card-img-top" src="http://www.sumra.in/wp-content/uploads/2016/03/mit-pune-direct-admission.gif" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Maharashtra Institute of Technology</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Show notes</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col col-lg-4 col-md-6 col-sm-12">
+                <div class="card">
+                    <img class="card-img-top" src="https://static-collegedunia.com/public/college_data/images/appImage/24615_VIT_New.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Vishwakarma Institute of Technology</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Show notes</a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-    </div>
 
-    <div class="flat-color">
-        <div class="container">
-    
-    
-        </div>
-    </div>
-
-    <div class="flat-color">
-        <div class="container">
-        
-    
-        </div>
     </div>
 
 
 
-<!-- BOOTSTRAP 4.0 JAVASCRIPT CDN -->
-    <script src="js/main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-
+    <script src="js/main.js"></script>
 </body>
+
 </html>
