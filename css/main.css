@@ -1,69 +1,82 @@
-/* Main colors used are
- #e44d26 <-- Navbar
- #f16529 <-- Footer and header */
+/* ##########_________Navbar code_________############ */
 
-
- /*#######################_______Navbar_______############################ */
-.bg-light{
-    background-color: #e44d26!important;
+.bg-light {
+    background-color: rgb(100, 120, 184) !important;
 }
 
-.navbar-dark{
-    font-weight: 500;
-    font-size: 1.1em;
+.navbar-brand {
+    color: white !important;
+    font-weight: 600;
 }
 
-.nav-item{
-    margin-left: 10px;
+.nav-link {
+    color: white !important;
+    font-weight: 400;
 }
 
-.btn-primary{
-    background-color: #e44d26;
-    border-color: white;
-    border-width: 1.5px;
-    border-radius: 20px;
+.navbar-toggler {
+    margin-right: 5%;
 }
 
-.btn-primary:hover{
-    background-color: white;
-    border-color: #e44d26;
-    color: #e44d26;
+.dropdown-item {
+    color: rgb(100, 120, 184);
 }
 
-.form-control{
-    border-radius: 20px;
+/* ###########_________Jumbotron__________############# */
+
+.jumbotron {
+    background: url(https://images.unsplash.com/photo-1431263154979-0982327fccbb?ixlib=rb-0.3.5&s=73a2ad7c93c8054c8b728c8584bc7764&auto=format&fit=crop&w=1950&q=80) no-repeat center center;
+    background-size: 100% 100vh;
+    /* opacity: 0.5; */
+    color: rgb(100, 120, 184);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-.navbar-toggler:focus,
-.navbar-toggler:active {
-    outline: none;
+.display-4,
+.lead {
+    font-weight: 400;
 }
 
-
-/* #########################__________Content____________############################# */
-
-.title{
-    font-family: 'Comfortaa', cursive;
-    margin-top: 15px;
-    font-size: 1.7em;
-    block-size: 0.8em;
-    text-align: center;
+.btn-primary {
+    background: rgb(100, 120, 184) !important;
+    color: white !important;
 }
 
-hr.style1{
-    width: 50%;
-    margin-bottom: 30px;
+.btn-primary:hover {
+    background: rgb(61, 89, 182) !important;
 }
 
-.card-img-top{
-    height: 143px;
+/* #########___________Content cards________########## */
+
+.card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 10rem;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+.card-img-top {
+    height: 180px;
     width: 100%;
 }
 
-.card{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 18rem;
-    margin: 0 auto;
-    margin-bottom: 25px;
+.maps {
+    width: 100%;
+    height: auto;
+    align-content: center;
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(100, 120, 184);
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+    bottom: 0;
+    /* overflow-y: auto; */
+    height: 50px;
+    border-top: solid white;
 }
