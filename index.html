@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jay Khedekar | Manufacturing Engineer</title>
+  <meta name="description" content="Portfolio website for Jay Khedekar — Senior Manufacturing Engineer specializing in material flow, simulation, factory design, and industrial engineering." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <style>
+    :root {
+      --bg: #f5f5f5;
+      --panel: #ffffff;
+      --panel-2: #f2f2f2;
+      --text: #111111;
+      --muted: #555555;
+      --line: #e5e5e5;
+      --primary: #111111;
+      --accent: #777777;
+      --shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+      --radius: 16px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--max));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 88px 0;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 24px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: clamp(1.9rem, 3vw, 2.5rem);
+      line-height: 1.1;
+    }
+
+    .section-title p {
+      margin: 0;
+      color: #555;
+      max-width: 680px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #c3d7ff;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 0.5rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      margin-bottom: 1rem;
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.9);
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 76px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      box-shadow: 0 0 24px rgba(96, 165, 250, 0.6);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: #444;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #000;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      font-weight: 600;
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      padding: 72px 0 36px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 6vw, 5.2rem);
+      line-height: 0.95;
+      margin: 0 0 1rem;
+      letter-spacing: -0.05em;
+    }
+
+    .hero h1 span {
+      color: #111;
+    }
+
+    .hero p {
+      color: #444;
+      font-size: 1.05rem;
+      max-width: 680px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      border-radius: 999px;
+      padding: 0.95rem 1.2rem;
+      font-weight: 600;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: #111;
+      color: white;
+      box-shadow: var(--shadow);
+    }
+    .btn-secondary {
+      border: 1px solid var(--line);
+      color: #111;
+      background: #fff;
+    }
+
+    .socials {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .socials a {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: #111;
+      transition: 0.2s ease;
+    }
+
+    .socials a:hover {
+      transform: translateY(-2px);
+      background: #f0f0f0;
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.35rem;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .profile-card {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .profile-image {
+      border-radius: 22px;
+      overflow: hidden;
+      aspect-ratio: 4 / 4.5;
+      background: #0d172d;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .profile-meta {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.9rem;
+    }
+
+    .stat {
+      padding: 1rem;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.2rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.2rem;
+    }
+
+    .experience-grid,
+    .portfolio-grid,
+    .skills-grid,
+    .education-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3, .card h4 {
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: #555;
+    }
+
+    .experience-card {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      min-height: 100%;
+    }
+
+    .experience-top {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .company-logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      object-fit: cover;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 0.35rem;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      background: #f0f0f0;
+      color: #333;
+      font-size: 0.8rem;
+      border: 1px solid #e0e0e0;
+    }
+
+    .portfolio-card {
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .portfolio-thumb {
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .portfolio-body {
+      padding: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .portfolio-body p {
+      min-height: 52px;
+    }
+
+    .portfolio-link {
+      color: #d8ebff;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .skill-card {
+      padding: 1.1rem;
+    }
+
+    .skill-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+
+    .bar {
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      overflow: hidden;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--primary), var(--primary-2), var(--accent));
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.2rem;
+      align-items: start;
+    }
+
+    .bullet-list {
+      display: grid;
+      gap: 0.8rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .bullet-list li {
+      display: flex;
+      gap: 0.8rem;
+      color: var(--muted);
+    }
+
+    .bullet-list i {
+      color: var(--success);
+      margin-top: 0.28rem;
+    }
+
+    .education-item,
+    .cert-item {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .education-item:last-child,
+    .cert-item:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .row-between {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .muted { color: var(--muted); }
+
+    footer {
+      padding: 32px 0 72px;
+      color: var(--muted);
+    }
+
+    .footer-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.2rem 1.4rem;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-grid,
+      .about-grid,
+      .experience-grid,
+      .portfolio-grid,
+      .skills-grid,
+      .education-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      nav {
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 0;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .experience-grid,
+      .portfolio-grid,
+      .skills-grid,
+      .education-grid,
+      .profile-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 72px 0;
+      }
+
+      .hero {
+        padding-top: 42px;
+      }
+
+      .row-between,
+      .section-title {
+        flex-direction: column;
+        align-items: start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-wrap">
+    <div class="container">
+      <nav>
+        <a href="#top" class="brand">
+          <span class="brand-dot"></span>
+          <span>Jay Khedekar</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">
+            <i class="fa-solid fa-gear"></i>
+            Senior Manufacturing Engineer · Material Flow & Simulation
+          </div>
+          <h1>Designing <span>smarter factories</span> through simulation, material flow, and industrial engineering.</h1>
+          <p>
+            I’m Jay Khedekar, a Senior Manufacturing Engineer at Tesla focused on optimizing new factory designs, validating concepts through discrete-event simulation, and improving manufacturing operations with data-driven decision-making.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-arrow-down"></i>
+              View Projects
+            </a>
+            <a href="https://www.linkedin.com/in/jaykhedekar/" target="_blank" class="btn btn-secondary">
+              <i class="fa-brands fa-linkedin"></i>
+              LinkedIn
+            </a>
+          </div>
+
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/jaykhedekar/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/jaykhedekar7" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://twitter.com/JayKhedekar7" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="mailto:jaykhedekar@hotmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <aside class="hero-card profile-card">
+          <div class="profile-image">
+            <img src="images/dp.jpg" alt="Jay Khedekar portrait" />
+          </div>
+          <div class="profile-meta">
+            <div class="stat">
+              <strong>Tesla</strong>
+              <span>Factory design, material flow, DES</span>
+            </div>
+            <div class="stat">
+              <strong>FlexSim</strong>
+              <span>Advanced simulation modeling</span>
+            </div>
+            <div class="stat">
+              <strong>Python · R · SQL</strong>
+              <span>Analytics and data tooling</span>
+            </div>
+            <div class="stat">
+              <strong>Austin, TX</strong>
+              <span>Open to collaboration</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <div class="eyebrow"><i class="fa-solid fa-briefcase"></i> Experience</div>
+            <h2>Work Experience</h2>
+          </div>
+          <p>A snapshot of roles across manufacturing engineering, simulation, analytics, and operations.</p>
+        </div>
+
+        <div class="grid experience-grid">
+          <article class="card experience-card">
+            <div class="experience-top">
+              <img src="images/teslabg.png" alt="Tesla logo" class="company-logo" />
+              <div>
+                <h3>Sr. Manufacturing Engineer</h3>
+                <p>Tesla · Nov 2024 – Present</p>
+              </div>
+            </div>
+            <span class="tag"><i class="fa-solid fa-sitemap"></i> Factory Optimization & Material Flow</span>
+            <p>Leading simulation-driven decisions for new factory design, concept validation, and scalable material flow systems.</p>
+          </article>
+
+          <article class="card experience-card">
+            <div class="experience-top">
+              <img src="images/teslabg.png" alt="Tesla logo" class="company-logo" />
+              <div>
+                <h3>Industrial Engineer</h3>
+                <p>Tesla · Jun 2023 – Nov 2024</p>
+              </div>
+            </div>
+            <span class="tag"><i class="fa-solid fa-chart-line"></i> Material Flow & DES Simulation</span>
+            <p>Supported new programs with simulation, equipment planning, and manufacturing systems analysis.</p>
+          </article>
+
+          <article class="card experience-card">
+            <div class="experience-top">
+              <img src="images/teslabg.png" alt="Tesla logo" class="company-logo" />
+              <div>
+                <h3>Industrial Engineer Intern</h3>
+                <p>Tesla · May 2022 – Apr 2023</p>
+              </div>
+            </div>
+            <span class="tag"><i class="fa-solid fa-cubes"></i> Material Flow & DES Simulation</span>
+            <p>Built and tested material flow concepts using DES tools to improve layout and operational readiness.</p>
+          </article>
+
+          <article class="card experience-card">
+            <div class="experience-top">
+              <img src="images/ncdot.jpeg" alt="NCDOT logo" class="company-logo" />
+              <div>
+                <h3>Logistics Analyst Intern</h3>
+                <p>NCDOT · Feb 2022 – May 2023</p>
+              </div>
+            </div>
+            <span class="tag"><i class="fa-solid fa-truck-fast"></i> Logistics</span>
+            <p>Worked on logistics analysis and process improvement initiatives in public-sector operations.</p>
+          </article>
+
+          <article class="card experience-card">
+            <div class="experience-top">
+              <img src="images/wadhwani.jpg" alt="Wadhwani logo" class="company-logo" />
+              <div>
+                <h3>Statistical Analyst Intern</h3>
+                <p>Wadhwani Foundation · Dec 2020 – Jun 2021</p>
+              </div>
+            </div>
+            <span class="tag"><i class="fa-solid fa-chart-pie"></i> Analytics</span>
+            <p>Used data analysis and statistical methods to derive insights and support research-focused programs.</p>
+          </article>
+
+          <article class="card experience-card">
+            <div class="experience-top">
+              <img src="images/deepa.jpg" alt="Deepa logo" class="company-logo" />
+              <div>
+                <h3>Mechanical Engineering Trainee</h3>
+                <p>Aug 2020 – Dec 2020</p>
+              </div>
+            </div>
+            <span class="tag"><i class="fa-solid fa-wrench"></i> Mechanical Design</span>
+            <p>Supported engineering tasks across mechanical design, quality, and continuous improvement workstreams.</p>
+          </article>
+
+          <article class="card experience-card">
+            <div class="experience-top">
+              <img src="images/ceat.jpg" alt="CEAT logo" class="company-logo" />
+              <div>
+                <h3>Industrial Engineering Intern</h3>
+                <p>CEAT · Dec 2018 – Jun 2019</p>
+              </div>
+            </div>
+            <span class="tag"><i class="fa-solid fa-industry"></i> Process Engineering</span>
+            <p>Worked on process analysis, productivity improvement, and industrial engineering fundamentals in manufacturing.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <div class="eyebrow"><i class="fa-solid fa-grid-2"></i> Portfolio</div>
+            <h2>Featured Projects</h2>
+          </div>
+          <p>Selected work spanning simulation, CAD, analytics, process improvement, and manufacturing problem-solving.</p>
+        </div>
+
+        <div class="grid portfolio-grid">
+          <article class="card portfolio-card">
+            <img src="images/flexsim.jpeg" alt="Material flow simulation project" class="portfolio-thumb" />
+            <div class="portfolio-body">
+              <span class="tag"><i class="fa-solid fa-cube"></i> FlexSim</span>
+              <h3>Material Flow Simulation</h3>
+              <p>Simulation-driven analysis of manufacturing systems, layouts, and material handling concepts.</p>
+              <a href="https://grabcad.com/library/shell-and-tube-heat-exchanger-27" target="_blank" class="portfolio-link">View project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
+
+          <article class="card portfolio-card">
+            <img src="images/tab.JPG" alt="Tableau dashboard" class="portfolio-thumb" />
+            <div class="portfolio-body">
+              <span class="tag"><i class="fa-solid fa-chart-column"></i> Tableau</span>
+              <h3>Resume Dashboard</h3>
+              <p>An interactive dashboard version of my resume and professional profile built in Tableau.</p>
+              <a href="https://public.tableau.com/profile/jay.khedekar#!/vizhome/JayKhedekarResume/Dashboard1" target="_blank" class="portfolio-link">View dashboard <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
+
+          <article class="card portfolio-card">
+            <img src="https://d2t1xqejof9utc.cloudfront.net/screenshots/pics/73bbbab6bf5861275deef969f0de7851/original.jpg" alt="Asthma inhaler CAD model" class="portfolio-thumb" />
+            <div class="portfolio-body">
+              <span class="tag"><i class="fa-solid fa-compass-drafting"></i> SolidWorks</span>
+              <h3>Asthma Inhaler CAD</h3>
+              <p>A CAD modeling project focused on product geometry, manufacturability, and design execution.</p>
+              <a href="https://grabcad.com/library/asthma-inhaler-1" target="_blank" class="portfolio-link">View model <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
+
+          <article class="card portfolio-card">
+            <img src="images/six_sigma.jpg" alt="Six sigma project" class="portfolio-thumb" />
+            <div class="portfolio-body">
+              <span class="tag"><i class="fa-solid fa-bullseye"></i> Six Sigma</span>
+              <h3>Non-Conformity Reduction</h3>
+              <p>Process improvement work to reduce defects in piston manufacturing using structured quality methods.</p>
+              <a href="/six_sigma.html" target="_blank" class="portfolio-link">Open case study <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
+
+          <article class="card portfolio-card">
+            <img src="https://d2t1xqejof9utc.cloudfront.net/screenshots/pics/209a1d4ff561be2e010ff772349d5df9/original.jpg" alt="Plate-fin heat exchanger CAD model" class="portfolio-thumb" />
+            <div class="portfolio-body">
+              <span class="tag"><i class="fa-solid fa-pen-ruler"></i> CAD</span>
+              <h3>Plate-Fin Heat Exchanger</h3>
+              <p>A 3D CAD project demonstrating modeling detail, mechanical design understanding, and presentation quality.</p>
+              <a href="https://grabcad.com/library/plate-fin-heat-exchanger-1" target="_blank" class="portfolio-link">View model <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
+
+          <article class="card portfolio-card">
+            <img src="images/college_major.jpg" alt="Cluster analysis project" class="portfolio-thumb" />
+            <div class="portfolio-body">
+              <span class="tag"><i class="fa-solid fa-database"></i> R Analytics</span>
+              <h3>College Major Cluster Analysis</h3>
+              <p>Exploratory data analysis and clustering to study salary patterns and educational outcomes.</p>
+              <a href="/college_major.html" target="_blank" class="portfolio-link">Open project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <div class="eyebrow"><i class="fa-solid fa-sparkles"></i> Strengths</div>
+            <h2>Skills & Certifications</h2>
+          </div>
+          <p>Core technical tools, simulation platforms, analytics capabilities, and professional certifications.</p>
+        </div>
+
+        <div class="grid skills-grid">
+          <div class="card skill-card"><div class="skill-row"><span>FlexSim</span><span>90%</span></div><div class="bar"><span style="width: 90%"></span></div></div>
+          <div class="card skill-card"><div class="skill-row"><span>R Programming</span><span>90%</span></div><div class="bar"><span style="width: 90%"></span></div></div>
+          <div class="card skill-card"><div class="skill-row"><span>AnyLogic</span><span>90%</span></div><div class="bar"><span style="width: 90%"></span></div></div>
+          <div class="card skill-card"><div class="skill-row"><span>Python</span><span>70%</span></div><div class="bar"><span style="width: 70%"></span></div></div>
+          <div class="card skill-card"><div class="skill-row"><span>SQL</span><span>70%</span></div><div class="bar"><span style="width: 70%"></span></div></div>
+          <div class="card skill-card"><div class="skill-row"><span>Tableau</span><span>60%</span></div><div class="bar"><span style="width: 60%"></span></div></div>
+          <div class="card skill-card"><div class="skill-row"><span>Minitab</span><span>90%</span></div><div class="bar"><span style="width: 90%"></span></div></div>
+          <div class="card skill-card"><div class="skill-row"><span>MS Excel</span><span>90%</span></div><div class="bar"><span style="width: 90%"></span></div></div>
+          <div class="card skill-card"><div class="skill-row"><span>SolidWorks</span><span>60%</span></div><div class="bar"><span style="width: 60%"></span></div></div>
+        </div>
+
+        <div class="grid education-grid" style="margin-top: 1.2rem;">
+          <div class="card">
+            <h3>Certifications</h3>
+            <div class="cert-item">
+              <div class="row-between"><strong>Six Sigma Green Belt</strong><span class="muted">2020</span></div>
+            </div>
+            <div class="cert-item">
+              <div class="row-between"><strong>SolidWorks CAD World</strong><span class="muted">2020</span></div>
+            </div>
+            <div class="cert-item">
+              <div class="row-between"><strong>Machine Learning and Analytics in R</strong><span class="muted">2020</span></div>
+            </div>
+            <div class="cert-item">
+              <div class="row-between"><strong>Statistical Learning</strong><span class="muted">2019</span></div>
+            </div>
+          </div>
+
+          <div class="card" style="grid-column: span 2;">
+            <h3>What I work on</h3>
+            <ul class="bullet-list">
+              <li><i class="fa-solid fa-circle-check"></i><span>Discrete-event simulation for factory and material flow design</span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span>Layout concepting, validation, and manufacturability analysis</span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span>Data-driven decision support using Python, R, SQL, and analytics tools</span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span>Continuous improvement, operations strategy, and industrial engineering</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div class="card">
+          <div class="eyebrow"><i class="fa-solid fa-user"></i> About</div>
+          <h2 style="margin-top: 0;">About Me</h2>
+          <p class="muted">
+            I’m an industrial engineer with a strong foundation in manufacturing systems, material flow, and simulation. My work sits at the intersection of factory design, operations analysis, and data-driven problem-solving. I enjoy turning complex production challenges into structured, testable solutions.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-top: 0;">Highlights</h3>
+          <ul class="bullet-list">
+            <li><i class="fa-solid fa-circle-check"></i><span>Advanced DES experience with FlexSim and AnyLogic</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Strong analytics background in R, Python, SQL, and Tableau</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Hands-on experience across manufacturing, logistics, and process improvement</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <div class="eyebrow"><i class="fa-solid fa-graduation-cap"></i> Education</div>
+            <h2>Academic Background</h2>
+          </div>
+          <p>Formal training in manufacturing systems, mechanical engineering, and business management.</p>
+        </div>
+
+        <div class="grid education-grid">
+          <div class="card">
+            <div class="education-item">
+              <div class="row-between"><strong>Master’s in Integrated Manufacturing Systems Engineering</strong><span class="muted">2021 – 2023</span></div>
+              <p>North Carolina State University</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="education-item">
+              <div class="row-between"><strong>Bachelor’s in Mechanical Engineering</strong><span class="muted">2016 – 2020</span></div>
+              <p>Symbiosis International University</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="education-item">
+              <div class="row-between"><strong>Diploma in Business Management</strong><span class="muted">2017 – 2018</span></div>
+              <p>Symbiosis International University</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-card">
+        <span>© Jay Khedekar. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
